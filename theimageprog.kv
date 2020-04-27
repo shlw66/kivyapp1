@@ -1,0 +1,57 @@
+WindowManager:
+    MainWindow:
+    NobelWindow:
+    PatchWindow:
+    TrustyWindow:
+
+<MainWindow>:
+    name: "main"
+
+    GridLayout:
+        cols:3
+
+        Button:
+            text: "NobelBlueTeddy"
+            on_release:
+                app.root.current = "nobel" 
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "PatchPuppyPerry"
+            on_release:
+                app.root.current = "patch" 
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "TrustyBlackCat"
+            on_release:
+                app.root.current = "trusty" 
+                root.manager.transition.direction = "left"
+        
+
+<NobelWindow>:
+    name: "nobel"
+
+    Button:
+        text: "NobleBlueTeddy"
+        on_release:
+            app.root.current = "main"
+            root.manager.transition.direction = "right"
+            
+<PatchWindow>:
+    name: "patch"
+
+    Button:
+        text: "PatchPuppyPerry"
+        on_release:
+            app.root.current = "main"
+            root.manager.transition.direction = "right"
+            
+<TrustyWindow>:
+    name: "trusty"
+
+    Button:
+        text: "TrustyBlackCat"
+        on_release:
+            app.root.current = "main"
+            root.manager.transition.direction = "right"
